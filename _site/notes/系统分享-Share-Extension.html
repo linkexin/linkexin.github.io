@@ -7,30 +7,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
-	<title> 系统分享 Share  extension · The Plain</title>
+	<title> 系统分享 Share  extension · YUI 的严肃文</title>
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@HeiswayiNrird" />
+<meta name="twitter:site" content="@YUI" />
 <meta name="twitter:title" content=" 系统分享 Share  extension" />
-<meta name="twitter:description" content="系统分享 Share Extension">
+<meta name="twitter:description" content="说在前面">
 
-<meta name="description" content="系统分享 Share Extension">
-
-
-	<meta name="google-site-verification" content="epFgX0s_0RM3CdjwFcsewfXzPov2g8s9ZBOLyaIUH-o">
-
-
-<link rel="icon" href="http://localhost:4000/the-plain/assets/favicon.png">
-<link rel="apple-touch-icon" href="http://localhost:4000/the-plain/assets/touch-icon.png">
-<link rel="stylesheet" href="http://localhost:4000/the-plain/assets/core.css">
-<link rel="canonical" href="http://localhost:4000/the-plain/notes/%E7%B3%BB%E7%BB%9F%E5%88%86%E4%BA%AB-Share-Extension">
-<link rel="alternate" type="application/atom+xml" title="The Plain" href="http://localhost:4000/the-plain/feed.xml" />
+<meta name="description" content="说在前面">
 
 
 
+<link rel="icon" href="http://localhost:4000/assets/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:4000/assets/touch-icon.png">
+<link rel="stylesheet" href="http://localhost:4000/assets/core.css">
+<link rel="canonical" href="http://localhost:4000/notes/%E7%B3%BB%E7%BB%9F%E5%88%86%E4%BA%AB-Share-Extension">
+<link rel="alternate" type="application/atom+xml" title="YUI 的严肃文" href="http://localhost:4000/feed.xml" />
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
 
 
 	</head>
@@ -41,8 +37,8 @@
 
 	
 
-	<a href="/the-plain/">
-		<img src="http://www.gravatar.com/avatar/2b38b1b0e7e08b69379bd61582adf0c8.png?s=80" class="gravatar">
+	<a href="/">
+		<img class="gravatar" width="80px" height="80px" src="/assets/icon.jpg">
 	</a>
 	<span class="logo-prompt">Back to Home</span>
 
@@ -59,36 +55,37 @@
 
 	<div class="divider"></div>
 
-	<h1 id="系统分享-share-extension">系统分享 Share Extension</h1>
-
-<p>##说在前面</p>
+	
+<h2 id="说在前面">说在前面</h2>
 
 <p>扩展（ Extension ）是 iOS 8 中引入的一个非常重要的新特性。扩展让 app 之间的数据交互成为可能。用户可以在 app 中使用其他应用提供的功能，而无需离开当前的应用。</p>
 
 <p>其实扩展并不是 iOS 8 才有的，在早先版本里，从 iOS5 到 iOS7，分享插件的界面设计经过了几次变更，但是功能上一直十分有限，一开始仅限于系统级和系统原生应用的内容传递。后来苹果通过与Twitter和Facebook等几家公司签订独立的协议，实现了整合的方案，使内容分享到这些应用的过程更方便。
 <img src="http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092675/ShareExtension1_nrgune.png" alt="" /></p>
 
-<p>##基本介绍</p>
+<h2 id="基本介绍">基本介绍</h2>
 
-<p>####Containing App</p>
+<h4 id="containing-app">Containing App</h4>
 
 <p>扩展并不是一个独立的 app，扩展的 bundle 必须包含在一个普通应用的 bundle 的内部，这就意味着拓展不能单独存在，必须有一个包含它的 Containing App</p>
 
-<p>####Host App</p>
+<h4 id="host-app">Host App</h4>
 
 <p>扩展需要有应用来调用其运行，调用扩展的应用称为 Host App</p>
 
-<p>####创建</p>
+<h4 id="创建">创建</h4>
 
 <p><img src="http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092672/ShareExtension2_l8htrv.png" alt="" /></p>
 
-<p>目录结构：
-<img src="http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092672/ShareExtension3_rqpmb1.png" alt="" /></p>
+<p>目录结构：</p>
 
-<p>run 起来以后：
-<img src="http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092675/ShareExtension4_frypmo.png" alt="" /></p>
+<p><img src="http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092672/ShareExtension3_rqpmb1.png" alt="" /></p>
 
-<p>####父类 SLComposeServiceViewController</p>
+<p>run 起来以后：</p>
+
+<p><img src="http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092675/ShareExtension4_frypmo.png" alt="" /></p>
+
+<h4 id="父类-slcomposeserviceviewcontroller">父类 SLComposeServiceViewController</h4>
 
 <p>提供了一些方法：</p>
 
@@ -114,13 +111,13 @@
 展示完成时被调用，生命周期比较早，一般用来执行预加载任务
 </code></pre></div></div>
 
-<p>####共享数据
-<img src="http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092672/ShareExtension5_p7emjg.jpg" alt="" /></p>
+<h4 id="共享数据">共享数据</h4>
+<p><img src="http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092672/ShareExtension5_p7emjg.jpg" alt="" /></p>
 
 <p><img src="http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092671/ShareExtension6_yp1tjd.jpg" alt="" /></p>
 
-<p>####与 Containing App 共享数据
-通过 App Group 实现 Extension 和 Containing App 数据的共享
+<h4 id="与-containing-app-共享数据">与 Containing App 共享数据</h4>
+<p>通过 App Group 实现 Extension 和 Containing App 数据的共享
 <img src="http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092673/ShareExtension7_kkowqi.jpg" alt="" /></p>
 
 <p>entitlements 文件自动生成关于 App Group 的相关配置
@@ -181,14 +178,14 @@ NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcur
 }];
 </code></pre></div></div>
 
-<p>####与 Host App 共享数据
-<img src="http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092675/ShareExtension9_pavyco.png" alt="" /></p>
+<h4 id="与-host-app-共享数据">与 Host App 共享数据</h4>
+<p><img src="http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092675/ShareExtension9_pavyco.png" alt="" /></p>
 
 <p>代码实现</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for (NSExtensionItem *item in self.extensionContext.inputItems) {
     for (NSItemProvider *itemProvider in item.attachments) {
-        if ([itemProvider hasItemConformingToTypeIdentifier:(NSString       *)kUTTypeURL]) {
+        if ([itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeURL]) {
             [itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeURL
                                             options:nil
                                   completionHandler:^(id
@@ -203,7 +200,7 @@ NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcur
 }
 </code></pre></div></div>
 
-<p>####共享 Keychain 数据</p>
+<h4 id="共享-keychain-数据">共享 Keychain 数据</h4>
 <ul>
   <li>
     <p>开启 Keychain Group
@@ -236,7 +233,7 @@ SecItemCopyMatching((__bridge CFDictionaryRef)query, &amp;amp;result);
 self.passwordData = (__bridge_transfer NSData *)result;
 </code></pre></div></div>
 
-<p>####注意事项</p>
+<h4 id="注意事项">注意事项</h4>
 <ul>
   <li>结束扩展程序，必须要调用</li>
 </ul>
@@ -291,18 +288,13 @@ ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.url"
 
 <div class="page-navigation">
 	
-    <a class="next" href="http://localhost:4000/the-plain/notes/test" title="NEXT: test">&lt;&lt;</a>
-		<span> &middot; </span>
-  
-		<a class="home" href="http://localhost:4000/the-plain" title="Back to Homepage">Home</a>
+		<a class="home" href="http://localhost:4000" title="Back to Homepage">Home</a>
   
 </div>
 
 		</main>
 
 		<div class="footer">
-  <span class="block">&lt;/&gt; <a href="http://github.com/heiswayi/the-plain" title="a minimalist Jekyll theme for personal blog">The Plain theme</a> by <a href="http://heiswayi.github.io">Heiswayi Nrird</a>.</span>
-  <span class="block">&copy; 2017 YOUR_NAME</span>
 </div>
 
 

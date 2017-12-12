@@ -1,54 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Plain</title>
-    <description>The Plain is a minimalist Jekyll theme, that's it. Can't say anymore...</description>
-    <link>http://localhost:4000/the-plain</link>
-    
-      
-        <item>
-          <title>test</title>
-          <description>
-</description>
-          <pubDate>2017-12-12T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/the-plain/notes/test</link>
-          <guid isPermaLink="true">http://localhost:4000/the-plain/notes/test</guid>
-        </item>
-      
+    <title>YUI 的严肃文</title>
+    <description>一只用于承认的菜逼</description>
+    <link>http://localhost:4000</link>
     
       
         <item>
           <title> 系统分享 Share  extension</title>
-          <description>&lt;h1 id=&quot;系统分享-share-extension&quot;&gt;系统分享 Share Extension&lt;/h1&gt;
-
-&lt;p&gt;##说在前面&lt;/p&gt;
+          <description>
+&lt;h2 id=&quot;说在前面&quot;&gt;说在前面&lt;/h2&gt;
 
 &lt;p&gt;扩展（ Extension ）是 iOS 8 中引入的一个非常重要的新特性。扩展让 app 之间的数据交互成为可能。用户可以在 app 中使用其他应用提供的功能，而无需离开当前的应用。&lt;/p&gt;
 
 &lt;p&gt;其实扩展并不是 iOS 8 才有的，在早先版本里，从 iOS5 到 iOS7，分享插件的界面设计经过了几次变更，但是功能上一直十分有限，一开始仅限于系统级和系统原生应用的内容传递。后来苹果通过与Twitter和Facebook等几家公司签订独立的协议，实现了整合的方案，使内容分享到这些应用的过程更方便。
 &lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092675/ShareExtension1_nrgune.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;##基本介绍&lt;/p&gt;
+&lt;h2 id=&quot;基本介绍&quot;&gt;基本介绍&lt;/h2&gt;
 
-&lt;p&gt;####Containing App&lt;/p&gt;
+&lt;h4 id=&quot;containing-app&quot;&gt;Containing App&lt;/h4&gt;
 
 &lt;p&gt;扩展并不是一个独立的 app，扩展的 bundle 必须包含在一个普通应用的 bundle 的内部，这就意味着拓展不能单独存在，必须有一个包含它的 Containing App&lt;/p&gt;
 
-&lt;p&gt;####Host App&lt;/p&gt;
+&lt;h4 id=&quot;host-app&quot;&gt;Host App&lt;/h4&gt;
 
 &lt;p&gt;扩展需要有应用来调用其运行，调用扩展的应用称为 Host App&lt;/p&gt;
 
-&lt;p&gt;####创建&lt;/p&gt;
+&lt;h4 id=&quot;创建&quot;&gt;创建&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092672/ShareExtension2_l8htrv.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;目录结构：
-&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092672/ShareExtension3_rqpmb1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;目录结构：&lt;/p&gt;
 
-&lt;p&gt;run 起来以后：
-&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092675/ShareExtension4_frypmo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092672/ShareExtension3_rqpmb1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;####父类 SLComposeServiceViewController&lt;/p&gt;
+&lt;p&gt;run 起来以后：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092675/ShareExtension4_frypmo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;父类-slcomposeserviceviewcontroller&quot;&gt;父类 SLComposeServiceViewController&lt;/h4&gt;
 
 &lt;p&gt;提供了一些方法：&lt;/p&gt;
 
@@ -74,13 +64,13 @@
 展示完成时被调用，生命周期比较早，一般用来执行预加载任务
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;####共享数据
-&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092672/ShareExtension5_p7emjg.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;共享数据&quot;&gt;共享数据&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092672/ShareExtension5_p7emjg.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092671/ShareExtension6_yp1tjd.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;####与 Containing App 共享数据
-通过 App Group 实现 Extension 和 Containing App 数据的共享
+&lt;h4 id=&quot;与-containing-app-共享数据&quot;&gt;与 Containing App 共享数据&lt;/h4&gt;
+&lt;p&gt;通过 App Group 实现 Extension 和 Containing App 数据的共享
 &lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092673/ShareExtension7_kkowqi.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;entitlements 文件自动生成关于 App Group 的相关配置
@@ -141,14 +131,14 @@ NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcur
 }];
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;####与 Host App 共享数据
-&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092675/ShareExtension9_pavyco.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;与-host-app-共享数据&quot;&gt;与 Host App 共享数据&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092675/ShareExtension9_pavyco.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;代码实现&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for (NSExtensionItem *item in self.extensionContext.inputItems) {
     for (NSItemProvider *itemProvider in item.attachments) {
-        if ([itemProvider hasItemConformingToTypeIdentifier:(NSString       *)kUTTypeURL]) {
+        if ([itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeURL]) {
             [itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeURL
                                             options:nil
                                   completionHandler:^(id
@@ -163,7 +153,7 @@ NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcur
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;####共享 Keychain 数据&lt;/p&gt;
+&lt;h4 id=&quot;共享-keychain-数据&quot;&gt;共享 Keychain 数据&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;开启 Keychain Group
@@ -196,7 +186,7 @@ SecItemCopyMatching((__bridge CFDictionaryRef)query, &amp;amp;amp;result);
 self.passwordData = (__bridge_transfer NSData *)result;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;####注意事项&lt;/p&gt;
+&lt;h4 id=&quot;注意事项&quot;&gt;注意事项&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;结束扩展程序，必须要调用&lt;/li&gt;
 &lt;/ul&gt;
@@ -247,8 +237,8 @@ ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO &quot;public.url&quot;
 
 </description>
           <pubDate>2017-01-19T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/the-plain/notes/%E7%B3%BB%E7%BB%9F%E5%88%86%E4%BA%AB-Share-Extension</link>
-          <guid isPermaLink="true">http://localhost:4000/the-plain/notes/%E7%B3%BB%E7%BB%9F%E5%88%86%E4%BA%AB-Share-Extension</guid>
+          <link>http://localhost:4000/notes/%E7%B3%BB%E7%BB%9F%E5%88%86%E4%BA%AB-Share-Extension</link>
+          <guid isPermaLink="true">http://localhost:4000/notes/%E7%B3%BB%E7%BB%9F%E5%88%86%E4%BA%AB-Share-Extension</guid>
         </item>
       
     

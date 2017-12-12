@@ -1,4 +1,4 @@
-sitemap: /the-plain/sitemap.xml
+sitemap: /sitemap.xml
 
 user-agent: EmailCollector
 disallow: /
