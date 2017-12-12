@@ -7,235 +7,248 @@
     
       
         <item>
-          <title>For Example of very Long Title Would Be Typography Elements in One</title>
-          <description>&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; This markdown cheatsheet is a typography demo for this theme. Check out this post to learn more about this markdown usage when you want to get started with this theme. Enjoy!&lt;/p&gt;
-
-&lt;h2 id=&quot;typography-elements-in-one&quot;&gt;Typography Elements in One&lt;/h2&gt;
-
-&lt;p&gt;Let’s start with a informative paragraph. &lt;strong&gt;This text is bolded.&lt;/strong&gt; But not this one! &lt;em&gt;How about italic text?&lt;/em&gt; Cool right? Ok, let’s &lt;strong&gt;&lt;em&gt;combine&lt;/em&gt;&lt;/strong&gt; them together. Yeah, that’s right! I have code to highlight, so &lt;code class=&quot;highlighter-rouge&quot;&gt;ThisIsMyCode()&lt;/code&gt;. What a nice! Good people will hyperlink away, so &lt;a href=&quot;#&quot;&gt;here we go&lt;/a&gt; or &lt;a href=&quot;http://www.example.com&quot;&gt;http://www.example.com&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;headings-h1-to-h6&quot;&gt;Headings H1 to H6&lt;/h2&gt;
-
-&lt;h1 id=&quot;h1-heading&quot;&gt;H1 Heading&lt;/h1&gt;
-
-&lt;h2 id=&quot;h2-heading&quot;&gt;H2 Heading&lt;/h2&gt;
-
-&lt;h3 id=&quot;h3-heading&quot;&gt;H3 Heading&lt;/h3&gt;
-
-&lt;h4 id=&quot;h4-heading&quot;&gt;H4 Heading&lt;/h4&gt;
-
-&lt;h5 id=&quot;h5-heading&quot;&gt;H5 Heading&lt;/h5&gt;
-
-&lt;h6 id=&quot;h6-heading&quot;&gt;H6 Heading&lt;/h6&gt;
-
-&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;footnote&quot;&gt;Footnote&lt;/h2&gt;
-
-&lt;p&gt;Let’s say you have text that you want to refer with a footnote, you can do that too! This is an example for the footnote number one &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. You can even add more footnotes, with link! &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;blockquote&quot;&gt;Blockquote&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Start by doing what’s necessary; then do what’s possible; and suddenly you are doing the impossible. –Francis of Assisi&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; This theme does NOT support nested blockquotes.&lt;/p&gt;
-
-&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;list-items&quot;&gt;List Items&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;First order list item&lt;/li&gt;
-  &lt;li&gt;Second item&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Unordered list can use asterisks&lt;/li&gt;
-  &lt;li&gt;Or minuses&lt;/li&gt;
-  &lt;li&gt;Or pluses&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;code-blocks&quot;&gt;Code Blocks&lt;/h2&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;JavaScript syntax highlighting&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Python syntax highlighting&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;No language indicated, so no syntax highlighting.
-But let's throw in a &amp;lt;b&amp;gt;tag&amp;lt;/b&amp;gt;.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;mathematics&quot;&gt;Mathematics&lt;/h2&gt;
-
-&lt;p&gt;The theme comes ready with &lt;a href=&quot;https://www.mathjax.org/&quot;&gt;mathjax&lt;/a&gt; support built in, allowing for both simple inline equations like &lt;script type=&quot;math/tex&quot;&gt;ax^2 + bx + c = 0&lt;/script&gt; and much more complex mathematical expressions such as equation &lt;script type=&quot;math/tex&quot;&gt;\eqref{eq:sample}&lt;/script&gt; below.&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{align}
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t}  &amp;= \frac{4\pi}{c}\vec{\mathbf{j}} \\   
-\nabla \cdot \vec{\mathbf{E}} &amp;= 4 \pi \rho \tag{2} \label{eq:sample}\\
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t}  &amp;= \vec{\mathbf{0}} \\
-\nabla \cdot \vec{\mathbf{B}}  &amp;= 0\\
-\end{align} %]]&gt;&lt;/script&gt;
-
-&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;table&quot;&gt;Table&lt;/h2&gt;
-
-&lt;h3 id=&quot;table-1-with-alignment&quot;&gt;Table 1: With Alignment&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Tables&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Are&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Cool&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;col 3 is&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;right-aligned&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;$1600&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;col 2 is&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;centered&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;$12&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;zebra stripes&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;are neat&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;$1&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;table-2-with-typography-elements&quot;&gt;Table 2: With Typography Elements&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Markdown&lt;/th&gt;
-      &lt;th&gt;Less&lt;/th&gt;
-      &lt;th&gt;Pretty&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;em&gt;Still&lt;/em&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;renders&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;nicely&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;horizontal-line&quot;&gt;Horizontal Line&lt;/h2&gt;
-
-&lt;p&gt;The HTML &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;hr&amp;gt;&lt;/code&gt; element is for creating a “thematic break” between paragraph-level elements. In markdown, you can create a &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;hr&amp;gt;&lt;/code&gt; with any of the following:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;___&lt;/code&gt;: three consecutive underscores&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;---&lt;/code&gt;: three consecutive dashes&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;***&lt;/code&gt;: three consecutive asterisks&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;renders to:&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
-
-&lt;h3 id=&quot;youtube-embedded-iframe&quot;&gt;YouTube Embedded Iframe&lt;/h3&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/n1a7o44WxNo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&quot;image&quot;&gt;Image&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://octodex.github.com/images/minion.png&quot; alt=&quot;Minion&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Footnote number one yeah baby! Long sentence test of footnote to see how the words are wrapping between each other. Might overflowww! &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;A footnote you can link to - &lt;a href=&quot;#&quot;&gt;click here!&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
+          <title>test</title>
+          <description>
 </description>
-          <pubDate>2016-10-18T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/the-plain/notes/very-long-title-post</link>
-          <guid isPermaLink="true">http://localhost:4000/the-plain/notes/very-long-title-post</guid>
+          <pubDate>2017-12-12T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/the-plain/notes/test</link>
+          <guid isPermaLink="true">http://localhost:4000/the-plain/notes/test</guid>
         </item>
       
     
       
         <item>
-          <title>Download this Theme</title>
-          <description>&lt;p&gt;The Plain is a minimalist Jekyll theme, designed to focus on writing that really matters to you and your audience. Everything else is just a distraction. Nothing more other than useful and understandable information sharing. I have made a final update to this theme. This theme is suit best for personal blog type, but not limited to.&lt;/p&gt;
+          <title> 系统分享 Share  extension</title>
+          <description>&lt;h1 id=&quot;系统分享-share-extension&quot;&gt;系统分享 Share Extension&lt;/h1&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Fork&lt;/em&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;em&gt;download&lt;/em&gt;&lt;/strong&gt; the theme &lt;a href=&quot;https://github.com/heiswayi/the-plain&quot;&gt;here on GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;##说在前面&lt;/p&gt;
+
+&lt;p&gt;扩展（ Extension ）是 iOS 8 中引入的一个非常重要的新特性。扩展让 app 之间的数据交互成为可能。用户可以在 app 中使用其他应用提供的功能，而无需离开当前的应用。&lt;/p&gt;
+
+&lt;p&gt;其实扩展并不是 iOS 8 才有的，在早先版本里，从 iOS5 到 iOS7，分享插件的界面设计经过了几次变更，但是功能上一直十分有限，一开始仅限于系统级和系统原生应用的内容传递。后来苹果通过与Twitter和Facebook等几家公司签订独立的协议，实现了整合的方案，使内容分享到这些应用的过程更方便。
+&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092675/ShareExtension1_nrgune.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;##基本介绍&lt;/p&gt;
+
+&lt;p&gt;####Containing App&lt;/p&gt;
+
+&lt;p&gt;扩展并不是一个独立的 app，扩展的 bundle 必须包含在一个普通应用的 bundle 的内部，这就意味着拓展不能单独存在，必须有一个包含它的 Containing App&lt;/p&gt;
+
+&lt;p&gt;####Host App&lt;/p&gt;
+
+&lt;p&gt;扩展需要有应用来调用其运行，调用扩展的应用称为 Host App&lt;/p&gt;
+
+&lt;p&gt;####创建&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092672/ShareExtension2_l8htrv.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;目录结构：
+&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092672/ShareExtension3_rqpmb1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;run 起来以后：
+&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092675/ShareExtension4_frypmo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;####父类 SLComposeServiceViewController&lt;/p&gt;
+
+&lt;p&gt;提供了一些方法：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (BOOL)isContentValid;
+决定是否可以点击 Post 按钮
+ 
+- (UIView *)loadPreviewView
+加载预览视图
+ 
+- (void)didSelectPost;
+点击 Post 按钮时调用
+ 
+- (void)didSelectCancel;
+点击 Cancel 按钮时调用
+ 
+- (NSArray *)configurationItems;
+展示页下面可以点选的 item，返回一组包含 SLComposeSheetConfigurationItem 类型对象的数组
+ 
+- (void)reloadConfigurationItems;
+刷新一遍可点选的 item
+ 
+- (void)presentationAnimationDidFinish;
+展示完成时被调用，生命周期比较早，一般用来执行预加载任务
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;####共享数据
+&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092672/ShareExtension5_p7emjg.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092671/ShareExtension6_yp1tjd.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;####与 Containing App 共享数据
+通过 App Group 实现 Extension 和 Containing App 数据的共享
+&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092673/ShareExtension7_kkowqi.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;entitlements 文件自动生成关于 App Group 的相关配置
+&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092673/ShareExtension8_jbt2ig.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;代码实现&lt;/p&gt;
+
+&lt;p&gt;具体的实现方式可以是：NSUserDefault、NSFileManager、CoreData&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;NSUserDefault&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSUserDefaults *groupUserDefault = [[NSUserDefaults alloc] initWithSuiteName:@“group.com.zhihu.ios”];
+[groupUserDefault setObject:password forKey:key];
+[groupUserDefault synchronize];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;NSFileManager
+通过调用 containerURLForSecurityApplicationGroupIdentifier:方法可以获得 AppGroup 的共享目录&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSURL *groupURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@“group.com.zhihu.ios”];
+NSURL *fileURL = [groupURL URLByAppendingPathComponent:@&quot;demo.txt&quot;];
+//写入文件
+[@&quot;abc&quot; writeToURL:fileURL atomically:YES encoding:NSUTF8StringEncoding error:nil];
+//读取文件
+NSString *str = [NSString stringWithContentsOfURL:fileURL encoding:NSUTF8StringEncoding error:nil];
+NSLog(@&quot;str = %@&quot;, str);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CoreData&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//获取分组的共享项目
+NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@“group.com.zhihu.ios”];
+NSURL *storeURL = [containerURL URLByAppendingPathComponent:@&quot;DataModel.sqlite&quot;];
+ 
+//初始化持久化存储调度器
+NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@&quot;DataModel&quot; withExtension:@&quot;momd&quot;];
+ 
+NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
+ 
+[coordinator addPersistentStoreWithType:NSSQLiteStoreType
+configuration:nil
+URL:storeURL
+options:nil
+error:nil];
+ 
+//创建受控对象上下文
+NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+ 
+[context performBlockAndWait:^{
+[context setPersistentStoreCoordinator:coordinator];
+}];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;####与 Host App 共享数据
+&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092675/ShareExtension9_pavyco.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;代码实现&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for (NSExtensionItem *item in self.extensionContext.inputItems) {
+    for (NSItemProvider *itemProvider in item.attachments) {
+        if ([itemProvider hasItemConformingToTypeIdentifier:(NSString       *)kUTTypeURL]) {
+            [itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeURL
+                                            options:nil
+                                  completionHandler:^(id
+                                                      _Nullable item,
+                                                      NSError * _Null_unspecified error) {
+                                      if ([(NSObject *)item isKindOfClass:[NSURL class]]) {
+                                          NSLog(@&quot;分享的URL = %@&quot;, item);
+                                      }
+                                  }];
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;####共享 Keychain 数据&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;开启 Keychain Group
+&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092673/ShareExtension10_w4ccus.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;entitlements 文件自动生成关于 Keychain Group 的相关配置
+&lt;img src=&quot;http://res.cloudinary.com/dp1pheuq7/image/upload/v1513092674/ShareExtension11_vgdz9b.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在构造请求参数的时候必须加上 Keychain Group&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;存：
+NSMutableDictionary *query = [NSMutableDictionary new];
+[query setObject:service forKey:(__bridge id)kSecAttrService];
+[query setObject:account forKey:(__bridge id)kSecAttrAccount];
+[query setObject:self.passwordData forKey:(__bridge id)kSecValueData];
+[query setObject:keychainGroupName forKey:(__bridge id)kSecAttrAccessGroup];
+SecItemAdd((__bridge CFDictionaryRef)query, NULL);
+ 
+取：
+CFTypeRef result = NULL;
+NSMutableDictionary *query = [NSMutableDictionary new];
+[query setObject:service forKey:(__bridge id)kSecAttrService];
+[query setObject:account forKey:(__bridge id)kSecAttrAccount];
+[query setObject:keychainGroupName forKey:(__bridge id)kSecAttrAccessGroup];
+SecItemCopyMatching((__bridge CFDictionaryRef)query, &amp;amp;amp;result);
+self.passwordData = (__bridge_transfer NSData *)result;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;####注意事项&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;结束扩展程序，必须要调用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[self.extensionContext completeRequestReturningItems:@[] completionHandler:nil];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;不要使用与主 app 信息相关的类，例如：UIApplication，不能使用的在 API 中都会用宏 NS_EXTENSION_UNAVAILABLE 标明&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;配置激活扩展的规则 NSExtensionActivationRule，默认是 TRUEPREDICATE&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSExtensionActivationSupportsAttachmentsWithMaxCount
+附件最多限制，为数值类型。附件包括File、Image和Movie三大类，单一、混选总量不超过指定数量
+ 
+NSExtensionActivationSupportsAttachmentsWithMinCount
+附件最少限制，为数值类型。
+ 
+NSExtensionActivationSupportsFileWithMaxCount
+文件最多限制，为数值类型。文件泛指除Image/Movie之外的附件，例如【邮件】附件、【语音备忘录】等。
+单一、混选均不超过指定数量。
+ 
+NSExtensionActivationSupportsImageWithMaxCount
+图片最多限制，为数值类型。
+ 
+NSExtensionActivationSupportsMovieWithMaxCount
+视频最多限制，为数值类型。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;或者可以使用谓词来描述&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSExtensionActivationRule
+SUBQUERY (
+extensionItems,
+$extensionItem,
+SUBQUERY (
+$extensionItem.attachments,
+$attachment,
+(
+ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO &quot;public.url&quot;
+)
+).@count &amp;amp;gt;= 1
+).@count == 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 </description>
-          <pubDate>2015-09-09T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/the-plain/notes/download-this-theme</link>
-          <guid isPermaLink="true">http://localhost:4000/the-plain/notes/download-this-theme</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Lorem Ipsum</title>
-          <description>&lt;h3 id=&quot;the-standard-lorem-ipsum-passage-used-since-the-1500s&quot;&gt;The standard Lorem Ipsum passage, used since the 1500s&lt;/h3&gt;
-
-&lt;p&gt;“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”&lt;/p&gt;
-
-&lt;h3 id=&quot;section-11032-of-de-finibus-bonorum-et-malorum-written-by-cicero-in-45-bc&quot;&gt;Section 1.10.32 of “de Finibus Bonorum et Malorum”, written by Cicero in 45 BC&lt;/h3&gt;
-
-&lt;p&gt;“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?”&lt;/p&gt;
-
-&lt;h3 id=&quot;1914-translation-by-h-rackham&quot;&gt;1914 translation by H. Rackham&lt;/h3&gt;
-
-&lt;p&gt;“But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?”&lt;/p&gt;
-
-&lt;h3 id=&quot;section-11033-of-de-finibus-bonorum-et-malorum-written-by-cicero-in-45-bc&quot;&gt;Section 1.10.33 of “de Finibus Bonorum et Malorum”, written by Cicero in 45 BC&lt;/h3&gt;
-
-&lt;p&gt;“At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.”&lt;/p&gt;
-
-&lt;h3 id=&quot;1914-translation-by-h-rackham-1&quot;&gt;1914 translation by H. Rackham&lt;/h3&gt;
-
-&lt;p&gt;“On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.”&lt;/p&gt;
-</description>
-          <pubDate>2015-09-06T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/the-plain/notes/lorem-ipsum</link>
-          <guid isPermaLink="true">http://localhost:4000/the-plain/notes/lorem-ipsum</guid>
+          <pubDate>2017-01-19T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/the-plain/notes/%E7%B3%BB%E7%BB%9F%E5%88%86%E4%BA%AB-Share-Extension</link>
+          <guid isPermaLink="true">http://localhost:4000/the-plain/notes/%E7%B3%BB%E7%BB%9F%E5%88%86%E4%BA%AB-Share-Extension</guid>
         </item>
       
     
