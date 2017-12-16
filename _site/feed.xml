@@ -7,10 +7,8 @@
     
       
         <item>
-          <title> 基于 uiwebview 的富文本编辑器踩坑</title>
-          <description>&lt;h1 id=&quot;基于-uiwebview-的富文本编辑器踩坑&quot;&gt;基于 UIWebView 的富文本编辑器踩坑&lt;/h1&gt;
-
-&lt;h3 id=&quot;不能设置键盘外观键盘风格回车键等&quot;&gt;不能设置键盘外观、键盘风格、回车键等&lt;/h3&gt;
+          <title>基于 UIWebView 的富文本编辑器踩坑</title>
+          <description>&lt;h3 id=&quot;不能设置键盘外观键盘风格回车键等&quot;&gt;不能设置键盘外观、键盘风格、回车键等&lt;/h3&gt;
 &lt;p&gt;一些 textview 支持的键盘设置选项在 webview 是没法使用的，
 包括: UIKeyboardType、UIKeyboardAppearance、UITextSmartInsertDeleteType 等&lt;/p&gt;
 
@@ -70,8 +68,8 @@ function restorerange() {
 
 </description>
           <pubDate>2017-12-17T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/notes/%E5%9F%BA%E4%BA%8E-UIWebView-%E7%9A%84%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E8%B8%A9%E5%9D%91</link>
-          <guid isPermaLink="true">http://localhost:4000/notes/%E5%9F%BA%E4%BA%8E-UIWebView-%E7%9A%84%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E8%B8%A9%E5%9D%91</guid>
+          <link>http://localhost:4000/notes/%E5%9F%BA%E4%BA%8EUIWebView%E7%9A%84%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E8%B8%A9%E5%9D%91</link>
+          <guid isPermaLink="true">http://localhost:4000/notes/%E5%9F%BA%E4%BA%8EUIWebView%E7%9A%84%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E8%B8%A9%E5%9D%91</guid>
         </item>
       
     
