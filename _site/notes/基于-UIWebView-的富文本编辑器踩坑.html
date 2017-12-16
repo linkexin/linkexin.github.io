@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+	<title> 基于 uiwebview 的富文本编辑器踩坑 · YUI 的严肃文</title>
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@YUI" />
+<meta name="twitter:title" content=" 基于 uiwebview 的富文本编辑器踩坑" />
+<meta name="twitter:description" content="基于 UIWebView 的富文本编辑器踩坑">
+
+<meta name="description" content="基于 UIWebView 的富文本编辑器踩坑">
+
+
+
+<link rel="icon" href="http://localhost:4000/assets/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:4000/assets/touch-icon.png">
+<link rel="stylesheet" href="http://localhost:4000/assets/core.css">
+<link rel="canonical" href="http://localhost:4000/notes/%E5%9F%BA%E4%BA%8E-UIWebView-%E7%9A%84%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E8%B8%A9%E5%9D%91">
+<link rel="alternate" type="application/atom+xml" title="YUI 的严肃文" href="http://localhost:4000/feed.xml" />
+
+
+
+
+
+	</head>
+
+	<body>
+
+		<aside class="logo">
+
+	
+
+	<a href="/">
+		<img class="gravatar" width="80px" height="80px" src="/assets/icon.jpg">
+	</a>
+	<span class="logo-prompt">Back to Home</span>
+
+</aside>
+
+
+		<main>
+			<article>
+
+	<div class="center">
+		<h1> 基于 uiwebview 的富文本编辑器踩坑</h1>
+		<time>December 17, 2017</time>
+	</div>
+
+	<div class="divider"></div>
+
+	<h1 id="基于-uiwebview-的富文本编辑器踩坑">基于 UIWebView 的富文本编辑器踩坑</h1>
+
+<h3 id="不能设置键盘外观键盘风格回车键等">不能设置键盘外观、键盘风格、回车键等</h3>
+<p>一些 textview 支持的键盘设置选项在 webview 是没法使用的，
+包括: UIKeyboardType、UIKeyboardAppearance、UITextSmartInsertDeleteType 等</p>
+
+<h3 id="webview-的键盘会自带一个功能条">webview 的键盘会自带一个功能条</h3>
+<p>如图所示： 
+<img src="http://res.cloudinary.com/dp1pheuq7/image/upload/v1513184550/webview1_k2yo6k.png" alt="-w250" />
+国内一些主流的 app 的编辑器基本上都会在键盘的上面放一个功能条，实现一些自定义的功能，再加上 webview 自带的功能条，导致编辑器在视觉上重复，体验上不够友好。
+去掉自带功能条的方法可以参考：<a href="https://stackoverflow.com/questions/2105858/uiwebview-keyboard-getting-rid-of-the-previous-next-done-bar">参考</a></p>
+
+<h3 id="需要手动控制光标在可见区域内">需要手动控制光标在可见区域内</h3>
+<p>在 webview 中输入文本并换行，webview 不会把光标所在位置自动滚动到可见区域，所以需要通过额外的计算来控制 webview 的滚动。
+可以用 js 监听 webview 的光标位置变化事件或者文本变化事件，监听到以后获取一下光标当前在 webview 内部的位置，可以将位置坐标转换到 self.view 中，也可以将坐标直接减去 webview 的 contentOffset，也能得到光标相对于 self.view 顶部的距离。
+得到光标距离 self.view 顶部的距离后，如果距离小于0，表示光标在可见区域的上方，如果距离大于 self.view 减去键盘的高度，表示光标在可见区域的下方。需要注意的是，返回的坐标是光标左上角的位置，所以判断光标是否在可见区域的下方的时候需要再加上一个光标的高度，或者也可以直接使用 line_height，这两个值不会差太多。
+伪代码如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let caretOffset = caretY - webview.contentOffset.y
+if (caretOffset &lt; 0 || caretOffset &gt; self.view.height - keyboardHeight + lineHeight) {
+    webview.contentOffset.y += caretOffset
+}
+</code></pre></div></div>
+
+<h3 id="光标会默认在文本的最前面">光标会默认在文本的最前面</h3>
+<p>当 webview 变成第一响应者的后，光标会默认出现在文本的最开头位置，这个交互就不太好，想要做到光标默认在文本的末尾需要在 webview 取消第一响应者的时候记录当前光标位置，在成为第一响应者的时候再将光标位置设置回去。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var focusRange;
+
+// 记录光标位置
+function backuprange() {
+    var selection = window.getSelection();
+    focusRange = selection.getRangeAt(0);
+    focusRange.setEnd(focusRange.startContainer, focusRange.startOffset);
+}
+
+// 设置光标位置为上次记录的位置
+function restorerange() {
+    if (!focusRange) {
+        return;
+    }
+    var selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(focusRange);
+}
+</code></pre></div></div>
+
+<h3 id="链接识别问题">链接识别问题</h3>
+<p>编辑器中比较常见的场景是 @ 人或者加一个标签，并且高亮显示，这时候用 webview 就需要给这些特定的文本加标签，再给特定的标签设置css，但是如果在标签的后面紧接着输入文本，会发现文本也会被算在标签的内容里。
+目前我暂时没发现修复这个问题的办法，但是可以尽量避免，比如在链接后面自动加一个空格，分割开链接和后面的文本。</p>
+
+<h3 id="需要处理一些多余的标签">需要处理一些多余的标签</h3>
+<p>在用 webview 实现编辑器的过程中经常发现系统会自动加一些标签，比如 div, span, br 标签，这就有可能导致一些样式上的错误。
+比如编辑器有一个 placeholder，当用户把文本都删掉了，应该展示 placeholder，但是运行起来发现并不像想象的那样，原因是当用户把文本都删掉了以后文本其实并不是一个长度为0的字符串，而是 <code class="highlighter-rouge">&lt;br&gt;</code> 或者 <code class="highlighter-rouge">&lt;div style=\"direction: inherit;\"&gt;&lt;br&gt;&lt;/div&gt;"</code>，所以监听文本变化的时候需要特殊处理一下这两种情况来解决这个问题。</p>
+
+<h3 id="会有比较频繁的原生代码和-js-的交互">会有比较频繁的原生代码和 js 的交互</h3>
+<p>这点不能算是一个坑，但是确实是在开发过程中比较费劲的一个地方。
+不过好在 safari 提供了调试 webview 的工具。
+在 safari 的设置中勾选上「在菜单栏中显示”开发”菜单」，打开含有 webview 的界面，在 safari 的 开发-simulator 中选择当前的 webview 就可以看 css 样式以及在 js 方法里打断点调试啦。</p>
+
+
+
+</article>
+
+<div class="page-navigation">
+	
+		<a class="home" href="http://localhost:4000" title="Back to Homepage">Home</a>
+  
+		<span> &middot; </span>
+    <a class="prev" href="http://localhost:4000/notes/%E7%B3%BB%E7%BB%9F%E5%88%86%E4%BA%AB-Share-Extension" title="PREV:  系统分享 Share  extension">&gt;&gt;</a>
+  
+</div>
+
+		</main>
+
+		<div class="footer">
+</div>
+
+
+	</body>
+
+</html>
