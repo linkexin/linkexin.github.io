@@ -1,5 +1,5 @@
 ---
-title: iOS 动画保持动画执行后的状态（慎用 kCAFillModeForwards）
+title: iOS 保持动画执行后的状态（慎用 kCAFillModeForwards）
 ---
 
 ### 问题的提出
