@@ -2,19 +2,19 @@
 title: 在列表中使用 ComponentKit
 ---
 
-### 关于 ComponentKit
+## 关于 ComponentKit
 `ComponentKit` 是 `Facebook` 发布的一个受 `React` 启发而产生的 `iOS` 视图框架，最开始用于 `Facebook` 的 `News Feed`，现在已经开始作为整个 `Facebook` 的 `iOS` 开发框架使用。
 更多：[官方文档](http://componentkit.org/)、[一个中文介绍文档](https://segmentfault.com/a/1190000002625560)
 
 -------
 
 
-### 步骤
+## 步骤
 1. 实现 `CKComponentProvider` 协议
 2. 为列表创建 `CKCollectionViewTransactionalDataSource`
 3. 使用 `CKTransactionalComponentDataSourceChangeset`
 
-### 实现 CKComponentProvider 协议
+## 实现 CKComponentProvider 协议
 CKComponentProvider 只声明了一个方法：
 
 ```
@@ -26,18 +26,18 @@ CKComponentProvider 只声明了一个方法：
 ✨ 为什么这个方法是个类方法，不是实例方法或是 `block`？
 因为 `component` 是不可变的，为了保证这个方法返回的 `component` 不依赖其他的第三方属性，所以这里就将这个方法定义成了类方法。 
 
-### 为列表创建 CKCollectionViewTransactionalDataSource
+## 为列表创建 CKCollectionViewTransactionalDataSource
 在创建之前先来看看 `CKDataSource` 是什么及作用
-##### CKDataSource
+#### CKDataSource
 * `CKDataSource` 在 CK 框架中起到非常核心的作用。
 * `CKDataSource` 能够接收 `changesets`（后面会讲到），`changesets` 中包含 `commands` 和 `models`
 * 根据所给的 `changeset` 在后台线程生成计算 `component`
 * 将生成好的 `component` 输出给列表使用
 
-##### CKCollectionViewTransactionalDataSource
+#### CKCollectionViewTransactionalDataSource
 `CKCollectionViewTransactionalDataSource` 是 `CKDataSource` 的一个简单的封装，在这个基础上又实现了 `UICollectionViewDataSource` 的 `API`，也就是说 CK 列表中的 `UICollectionViewDataSource` 不需要我们自己实现，CK 已经帮我们实现了。
 
-##### 具体代码
+#### 具体代码
 
 ```
 // 将 component 的 size 范围设置成：宽度固定，高度自由变化，这个属性用于 component 高度的计算
@@ -59,11 +59,11 @@ supplementaryViewDataSource:nil
 configuration:configuration];
 ```
 
-### 使用 CKTransactionalComponentDataSourceChangeset
-##### changeset 是什么
+## 使用 CKTransactionalComponentDataSourceChangeset
+#### changeset 是什么
 `changeset` 是用来和 `datasource` 交流的一个工具，列表中所有的增、删、改操作都需要用 `changeset` 描述，然后再作用到 `datasource` 上。
 
-##### API
+#### API
 
 ```
 /**
@@ -97,7 +97,7 @@ CKTransactionalComponentDataSourceChangesetBuilder：
 - (CKTransactionalComponentDataSourceChangeset<ModelType> *)build;
 ```
 
-##### 具体代码
+#### 具体代码
 
 ```
 CKTransactionalComponentDataSourceChangesetBuilder *builder = [CKTransactionalComponentDataSourceChangesetBuilder new];
@@ -112,7 +112,7 @@ CKTransactionalComponentDataSourceChangesetBuilder *builder = [CKTransactionalCo
 + (CKComponent *)componentForModel:(id<NSObject>)model context:(id<NSObject>)context;
 ```
 
-### 参考
+## 参考
 http://componentkit.org/docs/datasource-overview.html
 http://componentkit.org/docs/datasource-changeset-api.html
 

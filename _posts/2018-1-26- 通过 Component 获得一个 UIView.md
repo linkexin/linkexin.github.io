@@ -73,4 +73,8 @@ CGSize size = [hostingView sizeThatFits:CGSizeMake(self.view.frame.size.width, C
 当 `hostingView` 的大小发生变化的时候会调用此方法（当再次调用 `updateModel` 方法，会重新生成一个 `component`，这时因为传入 `model` 不同，所以通过 `component` 生成的 `view` 也会变化，其中就包括大小的变化）
 上面提到过，`hostingView` 不会设置自己的高度，所以这里我们可以再计算一遍大小，再赋一遍值。
 
+## 参考
+http://componentkit.org/docs/component-hosting-view.html
+http://componentkit.org/appledoc/html/Classes/CKComponentHostingView.html
+
 
