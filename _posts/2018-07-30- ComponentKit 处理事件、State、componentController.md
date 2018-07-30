@@ -108,6 +108,7 @@ Component 是没有状态，不可变的，所以我们没办法改变 component
 ```
 
 vc、component、context 三者之间的关系：
+https://res.cloudinary.com/dp1pheuq7/image/upload/v1532972359/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7_2018-07-30_%E4%B8%8A%E5%8D%881.41.48_j6tt6u.png
 
 
 例子：
@@ -150,7 +151,8 @@ This is a detail the parent component should not have to manually manage.
 本质上，state 也是给 component 提供数据，供 component 渲染 UI 使用的
 
 按照之前我们提到过的，刷新 component 以后，会重新再生成一个新的 component，新 component 不能访问到任何和旧 component 相关的数据的，通常我们选择的方法是通过改变 model 来同步状态，但是有时候这个状态只能跟 UI 相关（比如上面提到的 文字的展开收起状态），不应该在数据层中有相关的逻辑。那怎么办？这时候就是用到 state 的时候了。
-State 可以在新旧 component 之间保持同一个状态
+State 可以在新旧 component 之间保持同一个状态：
+https://res.cloudinary.com/dp1pheuq7/image/upload/v1532972364/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7_2018-07-30_%E4%B8%8A%E5%8D%881.43.45_xeh6z9.png
 
 
 ### 怎么用
