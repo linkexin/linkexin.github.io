@@ -1,4 +1,4 @@
-# ComponentKit 处理事件、state、conponentController
+# ComponentKit 处理事件、state、componentController
 首先需要明确的是 componnent 是一个逻辑层级，不会在屏幕上渲染出来，事件真正是被添加到 component 所绑定的 view 上，ck 只是将 view 的事件代理到了 component 上，这样我们可以通过 component 来处理事件
 
 ## 添加事件
@@ -99,16 +99,11 @@ Component 是没有状态，不可变的，所以我们没办法改变 component
 那么现在的问题就是我们怎么样将 component 和 controller 关联起来，官方并没有给出 component 和 controller 具体是怎么联系起来的方法，下面是我们在日常使用当中采用的一种方法：
 ```
 1. 创建 controller，请求数据，创建 context ，context 中持有对应 controller 的弱引用（context 是创建 component 必须的一个参数，具体可以参考 [在列表中使用 ComponentKit · YUI 的严肃文](https://linkexin.github.io/notes/%E5%9C%A8%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8-ComponentKit)）
-```
-```
+
 2. 用 dataModel 和 context 作为参数创建 component，component 内部持有一份 dataModel 和 context 的引用
-```
 
-```
 3. 当用户点击 component 时，component handle 到了对应的事件
-```
 
-```
 4. component 通过本身持有的 context 拿到 controller 对象，并将事件传递给 controller
 ```
 
