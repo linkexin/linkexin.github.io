@@ -345,6 +345,8 @@ component 和 componentController 的关系是：component 并不能感知到它
 ## component 中的响应链
 得知了 component controller 这个东西的存在以后我们先来看看 component 中的响应链是怎么样的
 
+![-w250](https://componentkit.org/static/images/responder-chain.png)
+
 1	The next responder of a component is its controller, if it has one.
 
 2	The next responder of a component’s controller is its component’s parent component.
@@ -358,3 +360,14 @@ component 和 componentController 的关系是：component 并不能感知到它
 6	Eventually, this will reach the same root view as the component hierarchy.
 
 7	It’s up to you to manually bridge from the view responder chain into the component responder chain if desired by using CKComponentActionSend or one of the helpers described below.
+
+
+## 参考
+
+https://componentkit.org/docs/datasource-overview.html
+
+https://componentkit.org/docs/responder-chain.html
+
+https://componentkit.org/docs/component-controllers.html
+
+https://componentkit.org/docs/lifecycle-methods.html
