@@ -1,4 +1,12 @@
 # ComponentKit 处理事件、state、componentController
+
+## 关于 ComponentKit
+`ComponentKit` 是 `Facebook` 发布的一个受 `React` 启发而产生的 `iOS` 视图框架，最开始用于 `Facebook` 的 `News Feed`，现在已经开始作为整个 `Facebook` 的 `iOS` 开发框架使用。
+更多：[官方文档](http://componentkit.org/)、[一个中文介绍文档](https://segmentfault.com/a/1190000002625560)
+
+-------
+
+
 首先需要明确的是 componnent 是一个逻辑层级，不会在屏幕上渲染出来，事件真正是被添加到 component 所绑定的 view 上，ck 只是将 view 的事件代理到了 component 上，这样我们可以通过 component 来处理事件
 
 ## 添加事件
