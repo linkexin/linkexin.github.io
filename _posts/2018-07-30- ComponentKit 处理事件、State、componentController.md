@@ -1,10 +1,9 @@
-# ComponentKit 处理事件
-  
+# ComponentKit 处理事件、state、conponentController
 首先需要明确的是 componnent 是一个逻辑层级，不会在屏幕上渲染出来，事件真正是被添加到 component 所绑定的 view 上，ck 只是将 view 的事件代理到了 component 上，这样我们可以通过 component 来处理事件
 
 ## 添加事件
 添加时间可以分为 UIControlEvents 和 UIGestureRecognizer
-### UIControlEvents 
+### UIControlEvents
 声明如下：
 ```
 // CKComponentAction.h
@@ -98,16 +97,23 @@ action =
 ## 处理事件
 Component 是没有状态，不可变的，所以我们没办法改变 component 的状态然后去做刷新 UI 等等的操作，所以通常我们需要将事件代理到 comtroller 上去处理。
 那么现在的问题就是我们怎么样将 component 和 controller 关联起来，官方并没有给出 component 和 controller 具体是怎么联系起来的方法，下面是我们在日常使用当中采用的一种方法：
-	1. 创建 controller，请求数据，创建 context ，context 中持有对应 controller 的弱引用（context 是创建 component 必须的一个参数，具体可以参考 [在列表中使用 ComponentKit · YUI 的严肃文](https://linkexin.github.io/notes/%E5%9C%A8%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8-ComponentKit)）
+```
+1. 创建 controller，请求数据，创建 context ，context 中持有对应 controller 的弱引用（context 是创建 component 必须的一个参数，具体可以参考 [在列表中使用 ComponentKit · YUI 的严肃文](https://linkexin.github.io/notes/%E5%9C%A8%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8-ComponentKit)）
+```
+```
+2. 用 dataModel 和 context 作为参数创建 component，component 内部持有一份 dataModel 和 context 的引用
+```
 
-	2. 用 dataModel 和 context 作为参数创建 component，component 内部持有一份 dataModel 和 context 的引用
+```
+3. 当用户点击 component 时，component handle 到了对应的事件
+```
 
-	3. 当用户点击 component 时，component handle 到了对应的事件
+```
+4. component 通过本身持有的 context 拿到 controller 对象，并将事件传递给 controller
+```
 
-	4. component 通过本身持有的 context 拿到 controller 对象，并将事件传递给 controller
+vc、component、context 三者之间的关系：
 
-  vc、component、context 三者之间的关系：
-![](ComponentKit%20%E5%A4%84%E7%90%86%E4%BA%8B%E4%BB%B6/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-30%20%E4%B8%8A%E5%8D%881.41.48.png)
 
 例子：
 ```
@@ -150,7 +156,6 @@ This is a detail the parent component should not have to manually manage.
 
 按照之前我们提到过的，刷新 component 以后，会重新再生成一个新的 component，新 component 不能访问到任何和旧 component 相关的数据的，通常我们选择的方法是通过改变 model 来同步状态，但是有时候这个状态只能跟 UI 相关（比如上面提到的 文字的展开收起状态），不应该在数据层中有相关的逻辑。那怎么办？这时候就是用到 state 的时候了。
 State 可以在新旧 component 之间保持同一个状态
-![](ComponentKit%20%E5%A4%84%E7%90%86%E4%BA%8B%E4%BB%B6/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-30%20%E4%B8%8A%E5%8D%881.43.45.png)
 
 
 ### 怎么用
@@ -263,7 +268,6 @@ When you do need an object with a longer lifecycle, *Component controllers* fill
 The component controller is created with the first component. When the component is updated, a new instance is generated but the component controller stays the same.
 ```
 
-![](ComponentKit%20%E5%A4%84%E7%90%86%E4%BA%8B%E4%BB%B6/43E19A99-0AF5-4201-BAEA-6B60E5211767.png)
 
 从上面的话和图中我们可以得知，不管这个component怎么刷新，对应的 componentController 总是同一个。
 
@@ -335,11 +339,17 @@ component 和 componentController 的关系是：component 并不能感知到它
 
 ## component 中的响应链
 得知了 component controller 这个东西的存在以后我们先来看看 component 中的响应链是怎么样的
-![](ComponentKit%20%E5%A4%84%E7%90%86%E4%BA%8B%E4%BB%B6/469A5069-5E7E-44BC-9CBF-65D6502940F0.png)
+
 1	The next responder of a component is its controller, if it has one.
+
 2	The next responder of a component’s controller is its component’s parent component.
+
 3	If a component doesn’t have a controller, its next responder is its parent component.
+
 4	The next responder of the root component is the view it is attached to.
+
 5	As normal, a view’s next responder is its superview.
+
 6	Eventually, this will reach the same root view as the component hierarchy.
+
 7	It’s up to you to manually bridge from the view responder chain into the component responder chain if desired by using CKComponentActionSend or one of the helpers described below.
