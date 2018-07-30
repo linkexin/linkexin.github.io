@@ -99,9 +99,13 @@ action =
 Component 是没有状态，不可变的，所以我们没办法改变 component 的状态然后去做刷新 UI 等等的操作，所以通常我们需要将事件代理到 comtroller 上去处理。
 那么现在的问题就是我们怎么样将 component 和 controller 关联起来，官方并没有给出 component 和 controller 具体是怎么联系起来的方法，下面是我们在日常使用当中采用的一种方法：
 	1. 创建 controller，请求数据，创建 context ，context 中持有对应 controller 的弱引用（context 是创建 component 必须的一个参数，具体可以参考 [在列表中使用 ComponentKit · YUI 的严肃文](https://linkexin.github.io/notes/%E5%9C%A8%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8-ComponentKit)）
+
 	2. 用 dataModel 和 context 作为参数创建 component，component 内部持有一份 dataModel 和 context 的引用
+
 	3. 当用户点击 component 时，component handle 到了对应的事件
+
 	4. component 通过本身持有的 context 拿到 controller 对象，并将事件传递给 controller
+
   vc、component、context 三者之间的关系：
 ![](ComponentKit%20%E5%A4%84%E7%90%86%E4%BA%8B%E4%BB%B6/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-07-30%20%E4%B8%8A%E5%8D%881.41.48.png)
 
