@@ -1,6 +1,7 @@
 ---
-title:【翻译】ECC椭圆曲线加密算法：ECDH 和 ECDSA
+title: ECC椭圆曲线加密算法：ECDH 和 ECDSA
 ---
+更友好的公式格式可以点击这里：[ECC椭圆曲线加密算法：ECDH 和 ECDSA](https://zhuanlan.zhihu.com/p/66794410)
 
 Hi all，这里是整个椭圆曲线系列的第三部分。原文链接如下：
 
