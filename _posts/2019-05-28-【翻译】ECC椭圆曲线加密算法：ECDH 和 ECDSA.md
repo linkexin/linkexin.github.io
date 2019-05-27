@@ -1,9 +1,11 @@
 # 【翻译】ECC椭圆曲线加密算法：ECDH 和 ECDSA
-#knowledge/cryptology
 
 Hi all，这里是整个椭圆曲线系列的第三部分。原文链接如下：
+
 [Elliptic Curve Cryptography: ECDH and ECDSA](https://link.zhihu.com/?target=https%3A//andrea.corbellini.name/2015/05/30/elliptic-curve-cryptography-ecdh-and-ecdsa/)
+
 想全面了解椭圆曲线的朋友可以先看看前两个部分，翻译得很棒：
+
 ​[ECC椭圆曲线加密算法：介绍 - 知乎](https://zhuanlan.zhihu.com/p/36326221)
 [ECC椭圆曲线加密算法：有限域和离散对数 - 知乎](https://zhuanlan.zhihu.com/p/44743146)
 
@@ -158,3 +160,4 @@ P=s−1(z+rdA)G=kG
 最后得到的这个等式使我们仅仅需要两个哈希和对应的签名，我们就可以得到 k，现在我们可以通过 s 的等式得到私钥了：
 s=k−1(z+rdS) mod n  ⇒  dS=r−1(sk−z) mod n
 类似的方法在 k 可预测的情况下也是能够使用的。
+
