@@ -83,7 +83,9 @@ willOverflow = willOverflow &+ 1
 // 此时 willOverflow 等于 0
 ```
 
+
 参考：[高级操作符 | 《The Swift Programming Language》中文版](https://numbbbbb.gitbooks.io/-the-swift-programming-language-/content/chapter2/24_Advanced_Operators.html)
+
 
 ## 用到的 Socket 库 API
 * sockaddr_storage
@@ -91,7 +93,8 @@ Socket 编程中标准的地址结构体，128 个字节，足以存储IPv6地�
 
 * sendto
 把数据报发给指定地址，在无连接的数据报 socket 方式下，由于本地 socket 并没有与远端机器建立连接，所以在发送数据时应指明目的地址，成功则返回实际传送出去的字符数，失败返回-1，错误原因存于errno 中。
-sendto() 函数原型为：  
+sendto() 函数原型为：
+
 ```
 int sendto (int s, const void *buf, int len, unsigned int flags, const struct sockaddr *to, int tolen);
 
@@ -104,6 +107,7 @@ int sendto (int s, const void *buf, int len, unsigned int flags, const struct so
 ```
 * recvfrom
 接收远程主机经指定的 socket 传来的数据，成功则返回接收到的字符数，失败则返回-1，错误原因存于errno中。
+
 ```
 int recvfrom(int s, void *buf, int len, unsigned int flags, struct sockaddr *from, int *fromlen);
 
@@ -116,6 +120,7 @@ int recvfrom(int s, void *buf, int len, unsigned int flags, struct sockaddr *fro
 ```
 
 其中  sockaddr_in 结构体如下：
+
 ```
 /*
  * Socket address, internet style.
@@ -131,4 +136,5 @@ struct sockaddr_in {
 
 ## ping 的完整过程
 PING 是一个应用层服务，用来检测两个主机之间的连通性，Ping 使用了 ICMP 回送请求与回送回答报文，ping 是应用层直接使用 IP 层 ICMP 的一个例子，它没有通过运输层的 TCP 或者 UDP
+
 [-w250](https://res.cloudinary.com/dp1pheuq7/image/upload/v1572084520/Ping_%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B_cwr996.png)
