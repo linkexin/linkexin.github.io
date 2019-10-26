@@ -84,7 +84,7 @@ willOverflow = willOverflow &+ 1
 ```
 
 
-参考：[高级操作符 | The Swift Programming Language 中文版](https://numbbbbb.gitbooks.io/-the-swift-programming-language-/content/chapter2/24_Advanced_Operators.html)
+参考：[高级操作符 The Swift Programming Language 中文版](https://numbbbbb.gitbooks.io/-the-swift-programming-language-/content/chapter2/24_Advanced_Operators.html)
 
 
 ## 用到的 Socket 库 API
