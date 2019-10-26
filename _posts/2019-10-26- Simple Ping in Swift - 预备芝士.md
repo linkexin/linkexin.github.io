@@ -84,7 +84,7 @@ willOverflow = willOverflow &+ 1
 ```
 
 
-参考：[高级操作符 | 《The Swift Programming Language》中文版](https://numbbbbb.gitbooks.io/-the-swift-programming-language-/content/chapter2/24_Advanced_Operators.html)
+参考：[高级操作符 | The Swift Programming Language 中文版](https://numbbbbb.gitbooks.io/-the-swift-programming-language-/content/chapter2/24_Advanced_Operators.html)
 
 
 ## 用到的 Socket 库 API
@@ -136,5 +136,4 @@ struct sockaddr_in {
 
 ## ping 的完整过程
 PING 是一个应用层服务，用来检测两个主机之间的连通性，Ping 使用了 ICMP 回送请求与回送回答报文，ping 是应用层直接使用 IP 层 ICMP 的一个例子，它没有通过运输层的 TCP 或者 UDP
-
-[-w250](https://res.cloudinary.com/dp1pheuq7/image/upload/v1572084520/Ping_%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B_cwr996.png)
+![-w250](https://res.cloudinary.com/dp1pheuq7/image/upload/v1572084520/Ping_%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B_cwr996.png)
