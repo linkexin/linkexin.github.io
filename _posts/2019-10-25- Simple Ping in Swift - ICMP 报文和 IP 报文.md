@@ -22,6 +22,7 @@ ICMP 报文是作为 IP 层数据报的数据，加上 IP 数据报的首部，�
 
 ### 代码
 关于 Swift 的内存操作可以戳：[Simple Ping in Swift - 预备芝士 · YUI 的严肃文](https://linkexin.github.io/notes/Simple-Ping-in-Swift-%E9%A2%84%E5%A4%87%E8%8A%9D%E5%A3%AB)
+
 定义一个 struct 用于表示 ICMP Header
 * 各个字段的定义
 ```
