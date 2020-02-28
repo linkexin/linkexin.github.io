@@ -1,3 +1,5 @@
+## [In a more friendly format](https://linkexin.github.io "")
+
 ## Hi
 
 It’s great to see you!
@@ -8,9 +10,6 @@ It’s great to see you!
 
 [监听 socket、已连接 socket](https://linkexin.github.io/notes/监听-socket-已连接-socket)
 
-
-
-[In a more friendly format](https://linkexin.github.io "")
 
 ## Thanks
 
