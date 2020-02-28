@@ -1,8 +1,6 @@
 ## [In a more friendly format](https://linkexin.github.io "")
 
-## Hi
-
-It’s great to see you!
+Hi, It’s great to see you!
 
 [AFSecurityPolicy](https://linkexin.github.io/notes/AFSecurityPolicy)
 
