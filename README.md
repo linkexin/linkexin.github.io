@@ -2,6 +2,8 @@
 
 Hi, It’s great to see you!
 
+[TCP 队头拥塞 和 HTTP 队头拥塞 和 QUIC](https://linkexin.github.io/notes/TCP-%E9%98%9F%E5%A4%B4%E6%8B%A5%E5%A1%9E-%E5%92%8C-HTTP-%E9%98%9F%E5%A4%B4%E6%8B%A5%E5%A1%9E)
+
 [从最原始的代理到内容分发服务](https://linkexin.github.io/notes/%E4%BB%8E%E6%9C%80%E5%8E%9F%E5%A7%8B%E7%9A%84%E4%BB%A3%E7%90%86%E5%88%B0%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E6%9C%8D%E5%8A%A1)
 
 [AFSecurityPolicy](https://linkexin.github.io/notes/AFSecurityPolicy)
