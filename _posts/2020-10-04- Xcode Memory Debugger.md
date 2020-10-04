@@ -28,8 +28,7 @@ Xcode Memory Debugger 的入口为 Xcode 底下工具条的 Debug Memory Graph �
 ### vmmap
 vmmap 通过将进程所占虚拟内存信息打印出来，以提供一些关于进程内存消耗更高级别的分析
 
-> vmmap App.memgraph
-
+`vmmap App.memgraph`
 
 能查看所有内存区域的具体信息
 首先是 non-writeable region，比如可执行文件、程序文本等：
@@ -37,7 +36,7 @@ vmmap 通过将进程所占虚拟内存信息打印出来，以提供一些关�
 接着是 writeable region，这里就是 app 进程的堆所在的位置：
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601794959/Xcode_Memory_Debugger_7.1_ptmtlw.png)  
 
-> vmmap —summary App.memgraph
+`vmmap —summary App.memgraph`
 
 
 可以看到一些 summary info 和不同类型的虚拟内存所占不同内存区块的大小，如果我们关注内存问题，应该关注 DIRTY SIZE 和 SWAPPED SIZE 这两列，分别表示脏内存大小和交换内存大小
@@ -55,31 +54,26 @@ Leaks 工具会在运行时追踪到堆中没有根的对象，如果看到一�
 有时候我们使用 vvmap 后发现堆内存很大，但是仅此而已，不会有跟多的信息
 这时候可以借助 heap 命令，heap 可以帮助显示堆中的内存分配，用于追踪非常复杂的分配
 
-> heap App.memgraph
-
+`heap App.memgraph`
 
 展示类名、这类对象的数量、平均大小、总大小
 看这张图可以发现，heap 默认是按数量来排序的，但是按此排序数量最多的大多是是系统对象，这样我们其实看不出问题在哪里
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601795024/Xcode_Memory_Debugger_11_shx9oe.png) 
 
 我们可以传递参数，让 heap 按照 size 来排序：
-> heap —sortBySize App.memgraph
-
-
+`heap —sortBySize App.memgraph`
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601795026/Xcode_Memory_Debugger_12_ehpki5.png) 
 
 上图可以看到 NSConcreteData 占了非常多内存，但这还不够，还需要知道这些对象是怎么形成的
 
 
-> heap App.memgraph -addresses all | <classes-pattern>
+`heap App.memgraph -addresses all | <classes-pattern>`
 
 
 当通过 -addresses 将具体的类名传递给 heap 指令时，heap 会罗列出所有指定类的每个实例的地址，有了这些地址，我们就能进一步研究这些对象是哪里来的了
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601795026/Xcode_Memory_Debugger_13_lil4my.png) 
  
-> malloc_history <memgraph> <address>
-
-
+`malloc_history <memgraph> <address>`
 显示具体 .memgraph 文件的具体对象地址的堆栈
 我们将上面 NSConcreteData 的其中一个地址输入，得到回溯记录，并且在堆栈中找到了和 App 相关的方法
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601795038/Xcode_Memory_Debugger_14_suanyq.png) ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601795031/Xcode_Memory_Debugger_15_twschh.png)
