@@ -28,7 +28,7 @@ Xcode Memory Debugger 的入口为 Xcode 底下工具条的 Debug Memory Graph �
 ### vmmap
 vmmap 通过将进程所占虚拟内存信息打印出来，以提供一些关于进程内存消耗更高级别的分析
 
-> vmmap App.memgraph  
+> vmmap App.memgraph
 
 能查看所有内存区域的具体信息
 首先是 non-writeable region，比如可执行文件、程序文本等：
@@ -36,7 +36,7 @@ vmmap 通过将进程所占虚拟内存信息打印出来，以提供一些关�
 接着是 writeable region，这里就是 app 进程的堆所在的位置：
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601794959/Xcode_Memory_Debugger_7.1_ptmtlw.png)  
 
-> vmmap —summary App.memgraph 
+> vmmap —summary App.memgraph
 
 可以看到一些 summary info 和不同类型的虚拟内存所占不同内存区块的大小，如果我们关注内存问题，应该关注 DIRTY SIZE 和 SWAPPED SIZE 这两列，分别表示脏内存大小和交换内存大小
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601795032/Xcode_Memory_Debugger_8_oesxdb.png)
