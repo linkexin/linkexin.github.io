@@ -30,6 +30,7 @@ vmmap 通过将进程所占虚拟内存信息打印出来，以提供一些关�
 
 > vmmap App.memgraph
 
+
 能查看所有内存区域的具体信息
 首先是 non-writeable region，比如可执行文件、程序文本等：
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601794969/Xcode_Memory_Debugger_7_sbrgm8.png)  
@@ -37,6 +38,7 @@ vmmap 通过将进程所占虚拟内存信息打印出来，以提供一些关�
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601794959/Xcode_Memory_Debugger_7.1_ptmtlw.png)  
 
 > vmmap —summary App.memgraph
+
 
 可以看到一些 summary info 和不同类型的虚拟内存所占不同内存区块的大小，如果我们关注内存问题，应该关注 DIRTY SIZE 和 SWAPPED SIZE 这两列，分别表示脏内存大小和交换内存大小
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601795032/Xcode_Memory_Debugger_8_oesxdb.png)
@@ -55,12 +57,14 @@ Leaks 工具会在运行时追踪到堆中没有根的对象，如果看到一�
 
 > heap App.memgraph
 
+
 展示类名、这类对象的数量、平均大小、总大小
 看这张图可以发现，heap 默认是按数量来排序的，但是按此排序数量最多的大多是是系统对象，这样我们其实看不出问题在哪里
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601795024/Xcode_Memory_Debugger_11_shx9oe.png) 
 
 我们可以传递参数，让 heap 按照 size 来排序：
 > heap —sortBySize App.memgraph
+
 
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601795026/Xcode_Memory_Debugger_12_ehpki5.png) 
 
@@ -72,6 +76,7 @@ Leaks 工具会在运行时追踪到堆中没有根的对象，如果看到一�
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601795026/Xcode_Memory_Debugger_13_lil4my.png) 
  
 > malloc_history <memgraph> <address>
+
 
 显示具体 .memgraph 文件的具体对象地址的堆栈
 我们将上面 NSConcreteData 的其中一个地址输入，得到回溯记录，并且在堆栈中找到了和 App 相关的方法
