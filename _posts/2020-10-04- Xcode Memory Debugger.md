@@ -74,6 +74,7 @@ Leaks 工具会在运行时追踪到堆中没有根的对象，如果看到一�
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601795026/Xcode_Memory_Debugger_13_lil4my.png) 
  
 `malloc_history <memgraph> <address>`
+
 显示具体 .memgraph 文件的具体对象地址的堆栈
 我们将上面 NSConcreteData 的其中一个地址输入，得到回溯记录，并且在堆栈中找到了和 App 相关的方法
 ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601795038/Xcode_Memory_Debugger_14_suanyq.png) ![](https://res.cloudinary.com/dp1pheuq7/image/upload/v1601795031/Xcode_Memory_Debugger_15_twschh.png)
